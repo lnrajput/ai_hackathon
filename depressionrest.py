@@ -78,5 +78,5 @@ def factorize_sel(data):
     data=data.drop('POSTS',1)
     return data.as_matrix().astype(int),y.as_matrix()
 if __name__ == "__main__":
-    app.run(host='',port=3000)
-    #app.run(host="0.0.0.0", port=int("3000"), debug=True)
+    #app.run(host='',port=3000)
+    app.run(host="0.0.0.0", port=int("3000"), debug=True)
