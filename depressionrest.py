@@ -8,6 +8,8 @@ logging.info("Logging is happening")
 le= None
 app= Flask(__name__)
 
+from sklearn.externals import joblib
+
 
 
 
@@ -54,8 +56,8 @@ def retpostResponse():
 
     # X_test,y_test=factorize_sel(df)
 
-    with open('./RandomForest.pkl','rb') as handle:
-        model=pickle.load(handle)
+    with open('./RandomForest1.pkl','rb') as handle:
+        model=joblib.load(handle)
     print(X_test)
     y_pred=model.predict(X_test)
     print(y_pred)
