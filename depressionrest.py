@@ -54,7 +54,7 @@ def retpostResponse():
 
     # X_test,y_test=factorize_sel(df)
 
-    with open('model/RandomForest.pkl','rb') as handle:
+    with open('RandomForest.pkl','rb') as handle:
         model=pickle.load(handle)
     print(X_test)
     y_pred=model.predict(X_test)
@@ -78,5 +78,5 @@ def factorize_sel(data):
     data=data.drop('POSTS',1)
     return data.as_matrix().astype(int),y.as_matrix()
 if __name__ == "__main__":
-    #app.run(host='',port=3000)
-    app.run(host="0.0.0.0", port=int("3000"), debug=True)
+    app.run(host='',port=3000)
+    #app.run(host="0.0.0.0", port=int("3000"), debug=True)
