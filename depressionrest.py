@@ -54,7 +54,7 @@ def retpostResponse():
 
     # X_test,y_test=factorize_sel(df)
 
-    with open('RandomForest.pkl','rb') as handle:
+    with open('./RandomForest.pkl','rb') as handle:
         model=pickle.load(handle)
     print(X_test)
     y_pred=model.predict(X_test)
